@@ -20,7 +20,7 @@ def emalgorithm(data):
         hiddenList.append(estep(data, ateta, bteta))
         hiddenList.append(estep(data, bteta, ateta))
         ateta, bteta = mstep(data, hiddenList)
-    # Last to lines of List are the resembling for the final hidden matrix
+    # Last two lines of List are the resembling for the final hidden matrix
     hiddenMatrix = np.asarray(hiddenList[-2],hiddenList[-1])
     return hiddenMatrix
 
